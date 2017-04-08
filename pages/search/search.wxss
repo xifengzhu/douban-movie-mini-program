@@ -1,0 +1,27 @@
+@import "../common/movie-list.wxss";
+
+.header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1rpx solid #ccc;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+}
+.header .search {
+  width: 100%;
+  padding: 20rpx 40rpx;
+  color: #666;
+  font-size: 38rpx;
+  text-align: center;
+}
+.header .search-placeholder {
+  color: #ccc;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+.list {
+  padding-top: 100rpx;
+}
