@@ -16,7 +16,24 @@ $ git clone git@github.com:xifengzhu/douban-movie-mini-program.git
 ## Preview
 ![预览](小程序预览.gif)
 
-## 开发计划
+## Used wechat api and Components
+### Api
+* wx.request(发起网络请求)
+* Page.onShareAppMessage（设置该页面的分享信息）
+* wx.login(调用接口登录获取用户信息)
+* Page.onPullDownRefresh（监听该页面用户下拉刷新事件）
+* Page.onReachBottom(无限滚动加载)
+* wx.switchTab (跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面)
+* wx.navigateTo (保留当前页面，跳转到应用内的某个页面)
+
+### Components
+* view
+* scroll-view
+* swiper
+* image
+* input
+
+## Plans
 * 使用命令生成页面（自动添加一个文件夹跟必须的三个文件）
 * 支持sass语法
 * 自动生成新页面时，自动添加配置到app.json
