@@ -24,6 +24,7 @@
   display: flex;
   margin-bottom: 10rpx;
   width: 100%;
+  font-size: 30rpx;
 }
 .board-item .title text {
   flex: 1;
@@ -33,7 +34,10 @@
   width: 20rpx;
 }
 .board-item .content {
-  height: 300rpx;
+  height: 340rpx;
+}
+.board-item .content .collect-count {
+  color: #999;
 }
 .board-item .content .inner {
   display: flex;
@@ -56,4 +60,6 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-size:24rpx;
+  margin-top:10rpx;
 }

@@ -1,4 +1,4 @@
-@import "../common/movie-list.wxss";
+@import "../common/movie-list/movie-list.wxss";
 
 .header {
   display: flex;

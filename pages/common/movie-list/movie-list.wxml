@@ -1,16 +1,18 @@
+<import src="../movie-rating/movie-rating" />
+
 <!-- 渲染普通的单项数据 -->
 <!-- 例如：https://api.douban.com/v2/movie/top250?count=1 -->
 <template name="item1">
   <navigator url="../movie-detail/movie-detail?id={{ item.id }}">
     <view class="item">
-       <image class="poster" src="{{ item.images.small }}"/>
+       <image class="poster" src="{{ item.images.medium }}"/>
       <view class="meta">
         <text class="title">{{ item.title }}</text>
-        <text class="sub-title">{{ item.original_title }} ({{ item.year }})</text>
-        <view class="artists">导演：<block wx:for="{{ item.directors }}" wx:key="{{ item.id }}"> {{ item.name }} </block></view>
-      </view>
-      <view class="rating">
-        <text>{{ item.rating.average }}</text>
+        <text class="artists">导演：<block wx:for="{{ item.directors }}" wx:key="{{ item.id }}"> {{ item.name }} </block></text>
+        <text class="artists">主演：<block wx:for="{{ item.casts }}" wx:key="{{ item.id }}"> {{ item.name }} </block></text>
+        <text class="artists">类型：{{ item.genres }}</text>
+        <template is="rating-template" data="{{item}}" />
+        <text class="collect-count"> {{ item.collect_count }} 人想看</text>
       </view>
     </view>
   </navigator>
@@ -21,14 +23,14 @@
 <template name="item2">
   <navigator url="../movie-detail/movie-detail?id={{ item.subject.id }}">
     <view class="item">
-      <image class="poster" src="{{ item.subject.images.small }}"></image>
+      <image class="poster" src="{{ item.subject.images.medium }}"></image>
       <view class="meta">
         <text class="title">{{ item.subject.title }}</text>
-        <text class="sub-title">{{ item.subject.original_title }} ({{ item.subject.year }})</text>
-        <view class="artists">导演：<block wx:for="{{ item.directors }}" wx:key="{{ item.id }}"> {{ item.name }} </block></view>
-      </view>
-      <view class="rating">
-        <text>{{ item.subject.rating.average }}</text>
+        <text class="artists">导演：<block wx:for="{{ item.subject.directors }}" wx:key="{{ item.id }}"> {{ item.name }} </block></text>
+        <text class="artists">主演：<block wx:for="{{ item.subject.casts }}" wx:key="{{ item.id }}"> {{ item.name }} </block></text>
+        <text class="artists">类型：{{ item.subject.genres }}</text>
+        <template is="rating-template" data="{{item}}" />
+        <text class="collect-count"> {{ item.subject.collect_count }} 人想看</text>
       </view>
     </view>
   </navigator>

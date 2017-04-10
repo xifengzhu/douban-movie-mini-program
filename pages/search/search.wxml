@@ -1,4 +1,4 @@
-<import src="../common/movie-list"/>
+<import src="../common/movie-list/movie-list"/>
 
 <view class="container">
   <view class="header">

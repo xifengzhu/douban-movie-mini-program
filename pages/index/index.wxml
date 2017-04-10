@@ -21,6 +21,7 @@
               <view class="movie-item">
                 <image src="{{ item.images ? item.images.large : item.subject.images.large }}" mode="aspectFill"/>
                 <text>{{ item.title || item.subject.title }}</text>
+                <text class="collect-count">{{ item.collect_count || item.subject.collect_count }} 人想看</text>
               </view>
             </navigator>
           </view>

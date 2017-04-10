@@ -1,0 +1,6 @@
+<template name="rating-template">
+  <view class="rating">
+    <view class="rating-star allstar{{item.rating.average || item.subject.rating.average | 0}}"></view>
+    <text class="rating-average">{{item.rating.average || item.subject.rating.average}}</text>
+  </view>
+</template>

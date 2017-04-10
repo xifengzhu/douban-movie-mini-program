@@ -1,3 +1,5 @@
+@import "/pages/common/movie-rating/movie-rating.wxss";
+
 .list {
   height: 100%;
 }
@@ -8,12 +10,15 @@
   cursor: pointer;
 }
 .list .item .poster {
-  width: 128rpx;
-  height: 168rpx;
-  margin-right: 20rpx;
+  width:150rpx;
+  height:225rpx;
+  margin-right:20rpx;
 }
 .list .item .meta {
   flex: 1;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
 }
 .list .item .meta .title,
 .list .item .meta .sub-title {
@@ -30,18 +35,15 @@
 .list .item .meta .artists {
   font-size: 24rpx;
   color: #999;
+  display: block;
+  line-height: 32rpx;
 }
-.list .item .rating text {
-  display: inline-block;
-  width: 40rpx;
-  font-size: 28rpx;
-  font-weight: bold;
-  text-align: center;
-  background-color: rgba(247, 76, 49, 0.8);
-  color: #fff;
-  padding: 10rpx;
-  border-radius: 20rpx;
+
+.list .item .meta .collect-count {
+  color: #bce6f9;
+  font-size: 24rpx;
 }
+
 .list .tips {
   font-size: 28rpx;
   text-align: center;
